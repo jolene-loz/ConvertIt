@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConvertIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Pnl-tF-nLj">
+                                <rect key="frame" x="84" y="61" width="228" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="userInputChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="2tn-Mi-B1X"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sb-gY-GiG">
+                                <rect key="frame" x="20" y="98" width="339" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Vlm-F6-pNL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Eoc-Va-Hae">
+                                <rect key="frame" x="142" y="459" width="203" height="29"/>
+                                <segments>
+                                    <segment title="0.0"/>
+                                    <segment title="0.00"/>
+                                    <segment title="0.000"/>
+                                    <segment title="None"/>
+                                </segments>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="decimalSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="2Vn-La-dcQ"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rounding:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5I-rS-9cC">
+                                <rect key="frame" x="30" y="459" width="78" height="21"/>
+                                <viewLayoutGuide key="safeArea" id="qJ8-Eb-47m"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Lar-Ty-vnL">
+                                <rect key="frame" x="20" y="62" width="47" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="AkT-N1-siV"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="+"/>
+                                    <segment title="-"/>
+                                </segments>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="signSegmentSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="ehU-B3-qP3"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Conversion" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hs3-09-qhI">
+                                <rect key="frame" x="118" y="158" width="139" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="pyi-YH-8Ig"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lI4-ka-W4n">
+                                <rect key="frame" x="27.5" y="209" width="320" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Es-FM-v6e">
+                                <rect key="frame" x="157" y="538" width="61" height="32"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Convert">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="convertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5rL-f7-NGI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klq-Hk-0qN">
+                                <rect key="frame" x="320" y="88" width="64" height="27"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lI4-ka-W4n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0P8-DB-nRk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eoc-Va-Hae" secondAttribute="trailing" constant="30" id="9Cv-kJ-Whb"/>
+                            <constraint firstItem="Lar-Ty-vnL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9KT-ZA-jHH"/>
+                            <constraint firstItem="5Sb-gY-GiG" firstAttribute="top" secondItem="Lar-Ty-vnL" secondAttribute="bottom" constant="8" symbolic="YES" id="EbA-PU-Yha"/>
+                            <constraint firstItem="Klq-Hk-0qN" firstAttribute="leading" secondItem="Pnl-tF-nLj" secondAttribute="trailing" constant="8" id="HNI-Xr-TkM"/>
+                            <constraint firstItem="5Sb-gY-GiG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="LVV-zI-Aog"/>
+                            <constraint firstItem="Lar-Ty-vnL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="Sfg-ny-ikg"/>
+                            <constraint firstItem="q5I-rS-9cC" firstAttribute="top" secondItem="lI4-ka-W4n" secondAttribute="bottom" constant="34" id="a6M-UK-oik"/>
+                            <constraint firstItem="Hs3-09-qhI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cu8-Ua-Qip"/>
+                            <constraint firstItem="Pnl-tF-nLj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="etl-UW-3sT"/>
+                            <constraint firstItem="3Es-FM-v6e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hvu-Ed-a9H"/>
+                            <constraint firstItem="Lar-Ty-vnL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="i8i-X2-aLX"/>
+                            <constraint firstItem="q5I-rS-9cC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="jZe-rM-iIr"/>
+                            <constraint firstItem="lI4-ka-W4n" firstAttribute="top" secondItem="Hs3-09-qhI" secondAttribute="bottom" constant="30" id="kax-qD-7eb"/>
+                            <constraint firstItem="Lar-Ty-vnL" firstAttribute="leading" secondItem="5Sb-gY-GiG" secondAttribute="leading" id="rvO-JT-Rmo"/>
+                            <constraint firstItem="Hs3-09-qhI" firstAttribute="top" secondItem="5Sb-gY-GiG" secondAttribute="bottom" constant="8" id="uS6-OA-TQ2"/>
+                            <constraint firstItem="Eoc-Va-Hae" firstAttribute="top" secondItem="lI4-ka-W4n" secondAttribute="bottom" constant="34" id="uV3-nV-vwS"/>
+                            <constraint firstItem="3Es-FM-v6e" firstAttribute="top" secondItem="Eoc-Va-Hae" secondAttribute="bottom" constant="51" id="z2B-Eg-lZO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="decimalSegment" destination="Eoc-Va-Hae" id="L20-oR-qEc"/>
+                        <outlet property="formulaPicker" destination="lI4-ka-W4n" id="rW3-8W-crM"/>
+                        <outlet property="fromUnitsLabel" destination="Klq-Hk-0qN" id="q65-Qj-X4j"/>
+                        <outlet property="resultsLabel" destination="5Sb-gY-GiG" id="WvJ-a0-eHN"/>
+                        <outlet property="signSegment" destination="Lar-Ty-vnL" id="oHd-Sg-fnH"/>
+                        <outlet property="userInput" destination="Pnl-tF-nLj" id="5aF-mV-xLx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-76.811594202898561" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+</document>
